@@ -35,7 +35,7 @@ parameters:
 - name: TARGET_INSTANCE
   value: 3scale-saas
 - name: GIT_REPO
-  value: https://github.com/rh-integration/3scale-toolbox-jenkins-samples.git
+  value: https://github.com/torbjorndahlen/3scale-toolbox-jenkins-samples.git
 - name: DEVELOPER_ACCOUNT_ID
   required: true
 - name: PRIVATE_BASE_URL

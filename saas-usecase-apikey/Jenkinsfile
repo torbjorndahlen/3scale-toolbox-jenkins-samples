@@ -14,7 +14,7 @@ node() {
 
   stage("Prepare") {
     service = toolbox.prepareThreescaleService(
-        openapi: [filename: "saas-usecase-apikey/swagger.yaml"],
+        openapi: [filename: "saas-usecase-apikey/swagger.json"],
         environment: [ baseSystemName: "saas_usecase_apikey",
                        privateBaseUrl: params.PRIVATE_BASE_URL ],
         toolbox: [ openshiftProject: params.NAMESPACE,
