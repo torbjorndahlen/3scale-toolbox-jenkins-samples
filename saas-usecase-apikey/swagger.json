@@ -47,7 +47,7 @@
                     "description": "Your API key",
                     "in": "query",
                     "type": "string",
-                    "required": "true"
+                    "required": true
                 }
             ]
         },
@@ -91,7 +91,7 @@
                     "description": "Your API key",
                     "in": "query",
                     "type": "string",
-                    "required": "true"
+                    "required": true
                 }
             ]
         },
@@ -128,7 +128,7 @@
                     "description": "Your API key",
                     "in": "query",
                     "type": "string",
-                    "required": "true"
+                    "required": true
                 }
             ]
         }
