@@ -12,7 +12,7 @@
             "name": "MIT License",
             "url": "https://opensource.org/licenses/MIT"
         },
-        "version": "0.9.1"
+        "version": "0.9"
     },
     "basePath": "/api",
     "paths": {
@@ -42,12 +42,12 @@
                     "type": "string"
                 },
                 {
+                    "x-data-threescale-name": "user_keys",
                     "name": "user_key",
-                    "in": "query",
                     "description": "Your API key",
-                    "required": true,
+                    "in": "query",
                     "type": "string",
-                    "x-data-threescale-name": "user_keys"
+                    "required": true
                 }
             ]
         },
@@ -86,12 +86,12 @@
                     "type": "number"
                 },
                 {
+                    "x-data-threescale-name": "user_keys",
                     "name": "user_key",
-                    "in": "query",
                     "description": "Your API key",
-                    "required": true,
+                    "in": "query",
                     "type": "string",
-                    "x-data-threescale-name": "user_keys"
+                    "required": true
                 }
             ]
         },
@@ -115,28 +115,6 @@
                     }
                 }
             },
-            "post": {
-                "summary": "Add a new beer",
-                "description": "Adds a new beer",
-                "consumes": [
-                    "application/json"
-                ],
-                "parameters": [
-                    {
-                        "name": "body",
-                        "in": "body",
-                        "description": "Beer to be added",
-                        "schema": {
-                            "$ref": "#/definitions/Beer"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Beer has been added."
-                    }
-                }
-            },
             "parameters": [
                 {
                     "name": "page",
@@ -145,12 +123,12 @@
                     "type": "number"
                 },
                 {
+                    "x-data-threescale-name": "user_keys",
                     "name": "user_key",
-                    "in": "query",
                     "description": "Your API key",
-                    "required": true,
+                    "in": "query",
                     "type": "string",
-                    "x-data-threescale-name": "user_keys"
+                    "required": true
                 }
             ]
         }
@@ -181,7 +159,18 @@
             }
         }
     },
-    "securityDefinitions": {},
+    "securityDefinitions": {
+        "api-key": {
+            "type": "apiKey",
+            "name": "api-key",
+            "in": "header"
+        }
+    },
+    "security": [
+        {
+            "api-key": []
+        }
+    ],
     "tags": [
         {
             "name": "beer",
