@@ -2,6 +2,7 @@
     "swagger": "2.0",
     "info": {
         "title": "Beer Catalog API",
+        "version": "0.9.2",
         "description": "An API for querying beer catalog of Acme Inc.",
         "contact": {
             "name": "Laurent Broudoux",
@@ -11,8 +12,7 @@
         "license": {
             "name": "MIT License",
             "url": "https://opensource.org/licenses/MIT"
-        },
-        "version": "0.9.1"
+        }
     },
     "basePath": "/api",
     "paths": {
@@ -21,9 +21,6 @@
                 "tags": [
                     "beer"
                 ],
-                "summary": "Get beer having name",
-                "description": "Get beer having name",
-                "operationId": "GetBeer",
                 "responses": {
                     "200": {
                         "description": "Beer having requested name",
@@ -31,20 +28,23 @@
                             "$ref": "#/definitions/Beer"
                         }
                     }
-                }
+                },
+                "operationId": "GetBeer",
+                "summary": "Get beer having name",
+                "description": "Get beer having name"
             },
             "parameters": [
                 {
                     "name": "name",
-                    "in": "path",
                     "description": "Name of beer to retrieve",
+                    "in": "path",
                     "required": true,
                     "type": "string"
                 },
                 {
                     "name": "user_key",
-                    "in": "query",
                     "description": "Your API key",
+                    "in": "query",
                     "required": true,
                     "type": "string",
                     "x-data-threescale-name": "user_keys"
@@ -56,9 +56,6 @@
                 "tags": [
                     "beer"
                 ],
-                "summary": "Get beers having status",
-                "description": "Get beers having status",
-                "operationId": "FindBeersByStatus",
                 "responses": {
                     "200": {
                         "description": "List of beers having requested status",
@@ -69,26 +66,29 @@
                             }
                         }
                     }
-                }
+                },
+                "operationId": "FindBeersByStatus",
+                "summary": "Get beers having status",
+                "description": "Get beers having status"
             },
             "parameters": [
                 {
                     "name": "status",
-                    "in": "path",
                     "description": "Status of beers to retrieve",
+                    "in": "path",
                     "required": true,
                     "type": "string"
                 },
                 {
                     "name": "page",
-                    "in": "query",
                     "description": "Number of page to retrieve",
+                    "in": "query",
                     "type": "number"
                 },
                 {
                     "name": "user_key",
-                    "in": "query",
                     "description": "Your API key",
+                    "in": "query",
                     "required": true,
                     "type": "string",
                     "x-data-threescale-name": "user_keys"
@@ -100,9 +100,6 @@
                 "tags": [
                     "beer"
                 ],
-                "summary": "List beers within catalog",
-                "description": "List beers within catalog",
-                "operationId": "ListBeers",
                 "responses": {
                     "200": {
                         "description": "Array of beers",
@@ -113,41 +110,44 @@
                             }
                         }
                     }
-                }
+                },
+                "operationId": "ListBeers",
+                "summary": "List beers within catalog",
+                "description": "List beers within catalog"
             },
             "post": {
-                "summary": "Add a new beer",
-                "description": "Adds a new beer",
                 "consumes": [
                     "application/json"
                 ],
                 "parameters": [
                     {
                         "name": "body",
-                        "in": "body",
                         "description": "Beer to be added",
                         "schema": {
                             "$ref": "#/definitions/Beer"
-                        }
+                        },
+                        "in": "body"
                     }
                 ],
                 "responses": {
                     "200": {
                         "description": "Beer has been added."
                     }
-                }
+                },
+                "summary": "Add a new beer",
+                "description": "Adds a new beer"
             },
             "parameters": [
                 {
                     "name": "page",
-                    "in": "query",
                     "description": "Number of page to retrieve",
+                    "in": "query",
                     "type": "number"
                 },
                 {
                     "name": "user_key",
-                    "in": "query",
                     "description": "Your API key",
+                    "in": "query",
                     "required": true,
                     "type": "string",
                     "x-data-threescale-name": "user_keys"
@@ -181,7 +181,9 @@
             }
         }
     },
-    "securityDefinitions": {},
+    "securityDefinitions": {
+
+    },
     "tags": [
         {
             "name": "beer",
