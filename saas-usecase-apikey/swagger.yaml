@@ -2,7 +2,7 @@
 swagger: "2.0"
 info:
   title: Beer Catalog API
-  version: 0.9.11
+  version: 0.9.12
   description: An API for querying beer catalog of Acme Inc.
   contact:
     name: Laurent Broudoux
@@ -19,7 +19,7 @@ paths:
       - beer
       responses:
         "200":
-          description: Updated description --- Beer having requested name
+          description: Beer having requested name
           schema:
             $ref: '#/definitions/Beer'
       operationId: GetBeer
@@ -71,7 +71,7 @@ paths:
       description: List beers within catalog
     parameters:
     - name: page
-      description: Number of page to retrieve
+      description: Number of pages to retrieve
       in: query
       type: number
 definitions:
