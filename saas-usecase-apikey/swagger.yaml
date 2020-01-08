@@ -6,7 +6,7 @@ info:
   description: An API for querying beer catalog of Acme Inc.
   contact:
     name: Laurent Broudoux
-    url: http://github.com/lbroudoux
+    url: http://github.com/torbjorndahlen
     email: laurent.broudoux@gmail.com
   license:
     name: MIT License
