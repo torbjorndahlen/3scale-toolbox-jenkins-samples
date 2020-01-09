@@ -1,7 +1,7 @@
 ---
 swagger: "2.0"
 info:
-  title: Beer Catalog API
+  title: Demo Beer Catalog API
   version: 0.9.12
   description: An API for querying beer catalog of Acme Inc.
   contact:
@@ -23,8 +23,8 @@ paths:
           schema:
             $ref: '#/definitions/Beer'
       operationId: GetBeer
-      summary: Get beer having name
-      description: Get beer having name
+      summary: Get beer having the given name
+      description: Get beer having the give name
     parameters:
     - name: name
       description: Name of beer to retrieve
