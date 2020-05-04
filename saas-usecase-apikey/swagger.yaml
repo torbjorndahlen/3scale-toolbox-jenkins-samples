@@ -2,7 +2,7 @@
 swagger: "2.0"
 info:
   title: Demo Beer Catalog API
-  version: 0.9.30
+  version: 0.9.31
   description: An API for querying beer catalog of Acme Inc.
   contact:
     name: Laurent Broudoux
@@ -95,8 +95,8 @@ definitions:
 securityDefinitions:
   api-key:
     type: apiKey
-    name: api-key
-    in: header
+    name: user_key
+    in: query
 security:
 - api-key: []
 tags:
